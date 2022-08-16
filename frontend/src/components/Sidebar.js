@@ -29,7 +29,7 @@ const Sidebar = () => {
         <p className="menu-label">Settting</p>
         <ul className="menu-list">
           <li>
-            <button class="button is-white is-fullwidth">
+            <button className="button is-white is-fullwidth">
               <IoLogOut /> Logout
             </button>
           </li>
