@@ -7,6 +7,8 @@ import dotenv from "dotenv";
 // route
 import UserRoute from "./app/user/router.js";
 import ProductRoute from "./app/product/router.js";
+import AuthRoute from "./app/auth/router.js";
+
 dotenv.config();
 
 const app = express();
@@ -34,6 +36,8 @@ app.use(
 app.use(express.json());
 app.use(UserRoute);
 app.use(ProductRoute);
+app.use(AuthRoute);
+
 app.listen(process.env.APP_PORT, () => {
   console.log("server up and running");
 });
