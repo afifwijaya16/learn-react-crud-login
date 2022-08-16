@@ -44,7 +44,6 @@ app.use(express.json());
 app.use(UserRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
-
 // store.sync();
 
 app.listen(process.env.APP_PORT, () => {
