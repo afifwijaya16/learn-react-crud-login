@@ -21,7 +21,7 @@ const Login = () => {
     if (isError === false) {
       dispatch(reset());
     }
-  }, [user, isSuccess, dispatch, navigate]);
+  }, [user, isSuccess, isError, dispatch, navigate]);
 
   const Auth = (e) => {
     e.preventDefault();
