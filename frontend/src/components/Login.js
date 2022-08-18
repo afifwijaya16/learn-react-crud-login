@@ -18,10 +18,8 @@ const Login = () => {
     if (user || isSuccess) {
       navigate("/dashboard");
     }
-    if (isError === false) {
-      dispatch(reset());
-    }
-  }, [user, isSuccess, isError, dispatch, navigate]);
+    dispatch(reset());
+  }, [user, isSuccess, dispatch, navigate]);
 
   const Auth = (e) => {
     e.preventDefault();
