@@ -45,13 +45,17 @@ const Navbar = () => {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons">
-                <button onClick={logout} className="button is-light">
-                  Log out
-                </button>
+            {user && (
+              <div className="navbar-item has-dropdown is-hoverable">
+                <span className="navbar-link">{user && user.name}</span>
+
+                <div className="navbar-dropdown is-right">
+                  <button onClick={logout} className="button navbar-item">
+                    Log out
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </nav>
