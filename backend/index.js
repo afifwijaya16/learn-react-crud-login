@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import session from "express-session";
 import dotenv from "dotenv";
+import fileUpload from "express-fileupload";
 // database
 import db from "./config/Database.js";
 import SequelizeStore from "connect-session-sequelize";
@@ -9,6 +10,7 @@ import SequelizeStore from "connect-session-sequelize";
 import UserRoute from "./app/user/router.js";
 import ProductRoute from "./app/product/router.js";
 import AuthRoute from "./app/auth/router.js";
+import NewsRoute from "./app/news/router.js";
 
 dotenv.config();
 
@@ -41,9 +43,12 @@ app.use(
   })
 );
 app.use(express.json());
+app.use(fileUpload());
+app.use(express.static("public"));
 app.use(UserRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
+app.use(NewsRoute);
 // store.sync();
 
 app.listen(process.env.APP_PORT, () => {

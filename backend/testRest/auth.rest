@@ -13,7 +13,7 @@ Content-Type: application/json
 
 {
     "email" : "afif@gmail.com",
-    "password" : "12345"
+    "password" : "afif"
 }
 
 ### me 
